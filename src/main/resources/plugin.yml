@@ -1,0 +1,21 @@
+name: NexusWardrobe
+version: ${project.version}
+main: com.nexuscraft.nexuswardrobe.NexusWardrobePlugin
+api-version: '1.21'
+author: Nexus Universe
+description: Clothing and body temperature. Winter can freeze you, summer can cook you, and what you wear decides which.
+softdepend: [NexusSeasons, NexusComfort, NexusPath]
+
+commands:
+  body:
+    description: How warm or cold your body is, and why.
+    usage: /body [player]
+  wardrobe:
+    description: The craftable clothes, and admin tools.
+    aliases: [clothes]
+    usage: /wardrobe [list|give <player> <garment>|reload]
+
+permissions:
+  nexuswardrobe.admin:
+    description: Look at anyone's body, hand out garments, reload.
+    default: op

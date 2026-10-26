@@ -1,0 +1,94 @@
+# NexusWardrobe: clothing and body temperature.
+# Everything here can be left alone. The numbers under `model` are the tuned defaults.
+
+enabled: true
+
+# How a player's temperature is shown: F or C.
+units: F
+
+# A line on the action bar while you are not comfortable (or are damp), and a chat message when your state changes.
+actionbar: true
+messages: true
+
+damage:
+  # Freezing and heatstroke hurt. false = the stages still slow you down, but never damage you.
+  enabled: true
+  # false = this plugin can never take your last heart (it leaves you on half a heart).
+  can-kill: true
+  # Multiplier for players on NexusComfort's "intense" preset.
+  intense-multiplier: 1.25
+
+# Players on NexusComfort's "gentle" preset (it turns "body effects" off) get the warnings but no potion effects or damage.
+respect-comfort: true
+# Players who switched Wardrobe off in NexusPath are left completely alone.
+respect-path: true
+
+climate:
+  # Tell NexusSeasons to stand down its own summer heat exhaustion, so the same sun is not punished twice.
+  take-over-heat-exhaustion: true
+
+dimensions:
+  # Steady temperatures (F) in the other worlds, which have no weather.
+  nether-f: 96
+  end-f: 50
+
+sources:
+  # How far (blocks) to look for fires, furnaces, lava and ice around a player, and how often (seconds).
+  radius: 3
+  scan-every-seconds: 2
+
+garments:
+  # The craftable clothes (Wool Cap, Parka, Wool Trousers, Fur-Lined Boots, Sun Hat, Linen Tunic). See /wardrobe.
+  recipes: true
+
+model:
+  # Air temperature (F) below which an undressed person starts to get cold.
+  comfort-low-f: 62
+  # Air temperature (F) above which an undressed person starts to overheat.
+  comfort-high-f: 84
+  # Degrees of cold one full point of insulation covers.
+  insulation-cold: 50
+  # Degrees of heat tolerance one full point of insulation costs.
+  insulation-heat: 14
+  # Share of insulation lost when soaked (0 to 1).
+  wet-insulation-loss: 0.65
+  # Wet skin only chills you below this temperature.
+  wet-chill-below-f: 60
+  # Extra degrees of chill from being fully soaked.
+  wet-chill-f: 10
+  # How hard each degree of cold stress pulls the core temperature down.
+  cold-gain: 0.22
+  # How hard each degree of heat stress pushes the core temperature up.
+  heat-gain: 0.19
+  # Degrees of sun-heat per point of UV index.
+  sun-per-uv: 0.6
+  # Extra degrees per piece of metal armour in strong sun.
+  metal-sun-f: 1.5
+  # Extra degrees while sprinting.
+  sprint-heat-f: 6
+  # Degrees taken off while in water.
+  water-chill-f: 14
+  # Degrees fire resistance takes off in the Nether.
+  fire-resistance-relief-f: 20
+  # How slowly the body gets colder or hotter (seconds).
+  tau-slow-seconds: 75
+  # How quickly it recovers (seconds).
+  tau-fast-seconds: 45
+  # How fast rain soaks you.
+  rain-wet-per-second: 0.012
+  # How fast a thunderstorm soaks you.
+  storm-wet-per-second: 0.02
+  # How fast snow dampens you.
+  snow-wet-per-second: 0.005
+  # How fast you dry out.
+  dry-per-second: 0.004
+  # Extra drying beside a fire.
+  dry-near-fire-per-second: 0.02
+  # Extra drying on a warm sunny day.
+  dry-in-sun-per-second: 0.006
+  # Most warmth fires can give together.
+  fire-cap-f: 30
+  # Most warmth hot food can give together.
+  warm-drink-cap-f: 20
+  # Most coolness cold food can give together.
+  cool-drink-cap-f: 15
